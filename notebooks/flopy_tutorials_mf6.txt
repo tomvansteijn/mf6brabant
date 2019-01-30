@@ -1,0 +1,2 @@
+https://github.com/modflowpy/flopy/blob/develop/examples/Notebooks/flopy3_mf6_A_simple-model.ipynb
+https://github.com/modflowpy/flopy/blob/develop/examples/Notebooks/flopy3_mf6_B_complex-model.ipynb

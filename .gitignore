@@ -108,3 +108,6 @@ bin/
 
 # data files
 data/
+
+# output
+output/
