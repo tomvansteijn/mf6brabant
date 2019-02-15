@@ -2,12 +2,12 @@
 import flopy
 
 
-def setup_simulation(name, workspace):
+def setup_simulation(conf):
     return flopy.mf6.MFSimulation(
-        sim_name=name,
-        exe_name='mf6',
-        version='mf6',
-        sim_ws=str(workspace)
+        sim_name=conf["name"],
+        exe_name=str(conf.get("executable", "mf6")),
+        version="mf6",
+        sim_ws=str(conf["workspace"])
     )
 
 def run_simulation(sim):
