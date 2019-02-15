@@ -25,8 +25,10 @@ def build_dis_package(gwf, conf):
         idomain=idomain,
     )
 
+
 def __read_idomain(idomainfile):
     return read_array(idomainfile).filled(0.)
+
 
 def __read_masked_levels(levelfiles, nlay):
     levelfiles = list(levelfiles.parent / levelfiles.name.format(ilay=i + 1)
@@ -34,13 +36,16 @@ def __read_masked_levels(levelfiles, nlay):
     lvls = read_3d_array(levelfiles)
     # mask bad nodata values
     lvls = np.ma.masked_where(lvls.mask | (lvls < -9990.), lvls)
-    # fill masked with zeros
-    return lvls.filled(0.)
+    return lvls
+
 
 def __build_grid(tops, bots):
-    grid = np.empty((tops.size+bots.size), dtype=tops.dtype)
-    grid[0::2, :, :] = tops
-    grid[1::2, :, :] = bots
-    top = grid[0, :, :]
-    botm = grid[1:, :, :]
+    top = tops[0, :, :].filled(0.)
+    botm = []
+    nlay = bots.shape[0]
+    for ilay in range(nlay):
+        botm.append(bots[ilay, :, :].filled((2*ilay + 1) * -1e-3))
+        if (ilay + 1) < nlay:
+            botm.append(tops[ilay + 1, :, :].filled((2*ilay + 2) * -1e-3))
+    botm = np.ma.stack(botm)
     return top, botm
