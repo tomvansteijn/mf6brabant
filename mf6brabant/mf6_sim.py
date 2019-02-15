@@ -10,5 +10,7 @@ def setup_simulation(conf):
         sim_ws=str(conf["workspace"])
     )
 
+
 def run_simulation(sim):
-    pass
+    sim.write_simulation()
+    sim.run_simulation()
