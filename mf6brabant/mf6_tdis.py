@@ -7,6 +7,6 @@ def build_tdis_package(simulation, conf):
         simulation,
         pname='tdis',
         time_units=conf.get('time_units', 'DAYS'),
-        nper=conf.n_periods,
-        perioddata=conf.stress_periods,
+        nper=conf["n_periods"],
+        perioddata=conf["stress_periods"]
     )
