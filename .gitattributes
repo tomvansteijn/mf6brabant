@@ -1,2 +1,9 @@
-'*.csv' filter=lfs diff=lfs merge=lfs -text
-'*.tif' filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.tif filter=lfs diff=lfs merge=lfs -text
+*.nam filter=lfs diff=lfs merge=lfs -text
+*.dis filter=lfs diff=lfs merge=lfs -text
+*.bas filter=lfs diff=lfs merge=lfs -text
+*.drn filter=lfs diff=lfs merge=lfs -text
+*.ghb filter=lfs diff=lfs merge=lfs -text
+*.riv filter=lfs diff=lfs merge=lfs -text
+

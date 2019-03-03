@@ -111,3 +111,6 @@ output/
 
 # batch files
 *.bat
+
+# modflow check files
+*.chk
