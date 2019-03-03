@@ -106,8 +106,5 @@ venv.bak/
 # modflow binaries
 bin/
 
-# data files
-data/
-
 # output
 output/
