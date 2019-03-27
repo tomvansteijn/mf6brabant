@@ -3,9 +3,10 @@ Steady-state Brabantmodel implementation in Modflow 6 using flopy.
 
 ## contents
 
-* `data`: Steady-state datasets of the Brabantmodel dated December 2018. Array data is stored in GeoTiff format. List data is stored in CSV files.
-* `mf6brabant`: Python package for creating Brabantmodel in Modflow 6 (work in progress)
-* `notebooks`: Jupyter notebooks with various implementations of the Brabantmodel in Modflow 6. The recommended version is run_mf6_using_external_files.ipynb
+* bin: destination folder for the Modflow 6 executables from USGS.
+* data: Steady-state datasets of the Brabantmodel dated December 2018. Array data is stored in GeoTiff format. List data is stored in CSV files.
+* mf6brabant: Python package for creating Brabantmodel in Modflow 6 (work in progress).
+* notebooks: Jupyter notebooks with various implementations of the Brabantmodel in Modflow 6. The recommended version is `run_mf6_using_external_files.ipynb`.
 
 ## usage
 
@@ -25,3 +26,5 @@ Written for Python 3. Required packages:
 * rasterio
 * flopy
 * jupyter to run the notebooks
+
+## Example output
