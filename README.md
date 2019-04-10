@@ -28,3 +28,5 @@ Written for Python 3. Required packages:
 * jupyter to run the notebooks
 
 ## Example output
+![Alt text](images/phi1.png?raw=true "phi1")
+![Alt text](images/phi1_triangles.png?raw=true "phi1_triangles")
